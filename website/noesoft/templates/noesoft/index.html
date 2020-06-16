@@ -1,10 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+{% load static %}
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
-</head>
-<body>
+    <title>Annonce 1</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="../../static/css/index.css">
 
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 logo_section text-center">
+                <img src="../../static/img/logo.png" alt="logo">
+            </div>
+            <div class="col-xl-12 links_section text-center">
+                <h1>Découvrez nos offres :</h1>
+                <ul>
+                    <li>
+                        <a href="{% url 'annonce_1' %}">Alternance Développeur.se DJANGO</a>
+                    </li>
+                    <li>
+                        <a href="#">Seconde annonce</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
