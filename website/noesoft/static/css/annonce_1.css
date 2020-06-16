@@ -1,0 +1,76 @@
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px 0 rgba(163,163,163,1);
+    margin: 0;
+    padding: 0;
+}
+
+.job_link:hover {
+    text-decoration: none;
+}
+
+.job_title {
+    margin: 0;
+    color: #8b8b8b;
+    font-weight: bold;
+}
+
+.navbar-brand img{
+    height: 55px;
+}
+
+.container-fluid {
+    margin-top: 2%;
+}
+
+.annonce h1 {
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 3%;
+}
+
+.annonce p {
+    text-align: justify;
+}
+
+.annonce p:nth-child(4){
+    margin: 0;
+}
+
+.postuler {
+    background-color: #e5f3f5;
+}
+
+.postuler h1 {
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 8%;
+    text-transform: uppercase;
+    color: #2a8a9e;
+    margin-top: 4%;
+}
+
+.form_titles p {
+    font-weight: bold;
+    line-height: 30px;
+}
+
+.form_inputs {
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+#load_btn {
+    margin-bottom: 16px;
+}
+
+#submit_btn {
+    width: 150px;
+    padding: 3px;
+    color: #ffffff;
+    background-color: #2a8a9e;
+    border: none;
+    font-weight: bold;
+}
