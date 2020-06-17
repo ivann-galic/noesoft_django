@@ -20,5 +20,6 @@ from noesoft import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', views.home),
-    path('annonce_1/', views.annonce_1, name='annonce_1')
+    path('annonce_1/', views.annonce_1, name='annonce_1'),
+    path('annonce_1_confirmed/<str:fname>/', views.annonce_1_confirmed, name='annonce_1_confirmed')
 ]
