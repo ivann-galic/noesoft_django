@@ -32,28 +32,18 @@
             <section class="annonce col-xl-6 offset-xl-1">
                 <div class="text col-xl-11">
                     <h1>{{job}}</h1>
-                    <p>NOÉSOFT  est  une  jeune  société de  services en  pleine  croissance.  Nous  développons  des applications  web  et  mobiles
-                        pour  le  compte  de  PME  dans  des  domaines  très  variés: ascensoristes,librairies, gestion immobilière...
-                        Chaque  projet  est  l’occasion  d’apporter  un maximum de valeur aux utilisateurs!</p>
-                    <p>Pour accompagner cette croissance, nous sommes à la
-                        recherche d’un.e développeur.se weben  alternance. Tu  seras  rattaché.e  au  dirigeant  de  la  société,  Product  Owner  certifié  et expérimenté.
-                        Sur  certains  projets,  ton  travail pourra  êtreencadré  par  Robin, l’excellent enseignantde la CodingFactory.</p>
-                    <p>Tes missions:</p>
+                    <p>L'activité repart et je recherche un développeur JavaScript fullStack expérimenté (Angular ou VueJS et NodeJS) pour une mission
+                        chez un de mes clients fournisseur de solutions numériques innovantes,</p>
+
+                    <p>Missions:</p>
                     <ul>
-                        <li>Comprendre les enjeux de chaque projet</li>
-                        <li>Étudier les user stories(Scrum)</li>
-                        <li>Proposer et mettre en place l’architecture logicielle</li>
-                        <li>Développer avec Djangoet Bootstrap(HTML, CSS, JS)</li>
-                        <li>Mettre en place des testsunitaires</li>
-                        <li>Suivre ton code avec Git (Gitlab)</li>
-                        <li>Déployer avec des outils tels que Ansible</li>
-                        <li>Présenter les nouvelles fonctionnalités</li>
-                        <li>Suggérer des améliorationscôté code et côté méthode</li>
+                        <li>Vous interviendrez sur un projet de développement d'outils de gestion</li>
+                        <li>Vous assurerez le maintien de l'existant mais surtout vous participerez à l'analyse du
+                            besoin et à la conception de nouvelles fonctionnalités, au choix techniques, à la mise en place des process d'intégration, ...</li>
+                        <li>Vous serez garant des bonnes pratiques et accompagnerez les plus junior sur leur montée en compétence technique</li>
                     </ul>
-                    <p>Passionné par le développement, convaincu que Django est un choix technologique pertinent, autonome  et  à  l’écoute,  tu  cherches  une  alternance
-                        qui  te  permettra  de  monter  en compétences sur de nombreux sujets tout en donnant beaucoup desens à ton travail.</p>
-                    <p>Lieu: Paris 9 dans un espace de coworking avec une super ambiance, d’autres sociétés dans l’édition de logiciels, un babyfoot et des apéros réguliers;)</p>
-                    <p>Démarrage: à partir de juillet 2020 pour 1 année d’alternance renouvelable </p>
+                    <p>L'anglais fluent est indispensable<p>
+                    <p>Compétences nécessaires: Angular ou VueJS, NodeJS, techno web (HTML, CSS)</p>
                 </div>
 
             </section>
@@ -69,7 +59,7 @@
                         <p>Message</p>
                     </div>
                     <div class="form_candidate col-xl-6">
-                        <form action="{% url 'annonce_1' %}" method="post" enctype="multipart/form-data">
+                        <form action="{% url 'annonce_2' %}" method="post" enctype="multipart/form-data">
                             {% csrf_token %}
                             <input type="text" id="name" class="form_inputs" name="name" required>
                             <input type="text" id="lastname" class="form_inputs" name="lastname" required>

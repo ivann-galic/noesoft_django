@@ -17,19 +17,19 @@
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
           crossorigin="anonymous">
-    <link rel="stylesheet" href="../../static/css/annonce_1.css">
+    <link rel="stylesheet" href="../../static/css/annonce.css">
 </head>
 <body>
    <header>
         <nav class="navbar sticky-top">
             <div class="col-xl-5 offset-xl-1" style="padding: 0">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="{% url 'home' %}">
                     <img src="../../static/img/logo.png" alt="logo">
                 </a>
             </div>
             <div class="col-xl-5 text-right" style="padding: 0">
-                <a class="job_link" href="#">
-                    <p class="job_title">Alternance Développeur.se DJANGO</p>
+                <a class="job_link" href="{% url 'home' %}">
+                    <p class="job_title">{{job}}</p>
                 </a>
             </div>
             <div class="col-xl-1" style="padding: 0"></div>
@@ -40,7 +40,7 @@
         <div class="row">
             <section class="annonce col-xl-6 offset-xl-1">
                 <div class="text col-xl-11">
-                    <h1>Alternance Développeur.se DJANGO</h1>
+                    <h1>{{job}}</h1>
                     <p>NOÉSOFT  est  une  jeune  société de  services en  pleine  croissance.  Nous  développons  des applications  web  et  mobiles
                         pour  le  compte  de  PME  dans  des  domaines  très  variés: ascensoristes,librairies, gestion immobilière...
                         Chaque  projet  est  l’occasion  d’apporter  un maximum de valeur aux utilisateurs!</p>

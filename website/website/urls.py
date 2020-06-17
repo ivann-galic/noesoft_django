@@ -18,12 +18,15 @@ from django.urls import path
 from noesoft import views
 from django.conf import settings
 from django.conf.urls.static import static
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', views.home),
+    path('home/', views.home, name='home'),
     path('annonce_1/', views.annonce_1, name='annonce_1'),
-    path('annonce_1_confirmed/<str:fname>/', views.annonce_1_confirmed, name='annonce_1_confirmed')
+    path('annonce_1_confirmed/<str:fname>/', views.annonce_1_confirmed, name='annonce_1_confirmed'),
+    path('annonce_2/', views.annonce_2, name='annonce_2'),
+    path('annonce_2_confirmed/<str:fname2>/', views.annonce_2_confirmed, name='annonce_2_confirmed')
 ]
 
 if settings.DEBUG:
