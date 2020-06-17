@@ -22,10 +22,10 @@ def annonce_1(request):
         fphone = request.POST.get('phone')
         fmessage = request.POST.get('message')
 
-        my_candidate = Candidate(name=fname, last_mane=flast_name, mail=fmail, phone=fphone, message=fmessage, job='test')
+        my_candidate = Candidate(name=fname, last_mane=flast_name, mail=fmail, phone=fphone, message=fmessage, job='Alternance Développeur.se DJANGO')
         my_candidate.save()
         return HttpResponseRedirect(reverse('annonce_1_confirmed', args=[fname]))
 
     # print(fname, flast_name, fmail, fphone, fmessage)
-    return HttpResponse(template.render({}, request))
+    return HttpResponse(template.render({"job": "Alternance Développeur.se DJANGO"}, request))
 
