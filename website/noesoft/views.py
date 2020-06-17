@@ -3,6 +3,7 @@ from django.urls import reverse
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from noesoft.models import Candidate
+from django.utils.translation import ugettext as _
 
 def home(request):
     template = loader.get_template('noesoft/index.html')
@@ -10,7 +11,7 @@ def home(request):
 
 def annonce_1_confirmed(request, fname):
     template = loader.get_template('noesoft/annonce_1_confirmed.html')
-    return HttpResponse(template.render({}, request))
+    return HttpResponse(template.render({"candidate_name": fname}, request))
 
 def annonce_1(request):
     template = loader.get_template('noesoft/annonce_1.html')
