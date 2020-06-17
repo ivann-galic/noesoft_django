@@ -69,13 +69,13 @@
                         <p>Message</p>
                     </div>
                     <div class="form_candidate col-xl-6">
-                        <form action="{% url 'annonce_1' %}" method="post">
+                        <form action="{% url 'annonce_1' %}" method="post" enctype="multipart/form-data">
                             {% csrf_token %}
                             <input type="text" id="name" class="form_inputs" name="name" required>
                             <input type="text" id="lastname" class="form_inputs" name="lastname" required>
                             <input type="email" id="mail" class="form_inputs" name="mail" required>
                             <input type="tel" id="phone" class="form_inputs" name="phone" required>
-                            <input type="file" accept="application/pdf" id="load_btn" name="file" required>
+                            <input type="file" accept="application/pdf" id="load_btn" name="myfile" required>
                             <textarea id="message" class="form_inputs" name="message" rows="5" required></textarea>
                             <input id="submit_btn" type="submit" value="POSTULER">
                         </form>
