@@ -34,13 +34,11 @@ def annonce_1(request):
 
         fmessage = request.POST.get('message')
         my_candidate = Candidate(name=fname, last_mane=flast_name, mail=fmail, phone=fphone, file=file_url, message=fmessage, job='Alternance Développeur.se DJANGO')
-        subject = 'Votre candidature au poste de'
-        # mail_message = 'Bonjour' + my_candidate.job +  + 'Merci pour votre candidature au poste de' + my_candidate.job '/n Nous reviendrons vers vous prochainement./n Cordialement,/n L’équipe NOÉSOFT'
-        mail_message = 'Merci pour votre candidature au poste'
+        subject = 'Votre candidature au poste de ' + my_candidate.job
+        mail_message = 'Bonjour ' + my_candidate.name + ',\n\nMerci pour votre candidature au poste de ' + my_candidate.job + ' !\nNous reviendrons vers vous prochainement.\n\nCordialement,\n\nL’équipe NOÉSOFT. '
         from_email = settings.EMAIL_HOST_USER
         to_list = [fmail]
         send_mail(subject, mail_message, from_email, to_list)
-        print(to_list)
         my_candidate.save()
         return HttpResponseRedirect(reverse('annonce_1_confirmed', args=[fname]))
 
@@ -67,6 +65,11 @@ def annonce_2(request):
         fmessage = request.POST.get('message')
 
         my_candidate = Candidate(name=fname2, last_mane=flast_name, mail=fmail, phone=fphone, file=file_url, message=fmessage, job='Developpeur JavaScript Fullstack')
+        subject = 'Votre candidature au poste de ' + my_candidate.job
+        mail_message = 'Bonjour ' + my_candidate.name + ',\n\nMerci pour votre candidature au poste de ' + my_candidate.job + ' !\nNous reviendrons vers vous prochainement.\n\nCordialement,\n\nL’équipe NOÉSOFT. '
+        from_email = settings.EMAIL_HOST_USER
+        to_list = [fmail]
+        send_mail(subject, mail_message, from_email, to_list)
         my_candidate.save()
         return HttpResponseRedirect(reverse('annonce_2_confirmed', args=[fname2]))
 
